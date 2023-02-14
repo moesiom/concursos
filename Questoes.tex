@@ -1,0 +1,82 @@
+\documentclass[13pt,a4paper]{article}
+\usepackage{moesiom} %estilo Moésio
+%-----------------------------------------------------------
+\usepackage{mathtools}
+\usepackage{polynom}
+%\usepackage{graphicx}
+\usepackage{bookmark}
+\usepackage{xargs} % Use more than one optional parameter in a new commands
+%\usepackage[pdftex,dvipsnames]{xcolor}  % Coloured text etc.
+\usepackage{xcolor}  % Coloured text etc.
+%
+%
+\usepackage[colorinlistoftodos,prependcaption,linecolor=red,backgroundcolor=blue!25,bordercolor=blue,textsize=tiny]{todonotes}
+%\newcommandx{\unsure}[2][1=]{\todo[linecolor=red,backgroundcolor=red!25,bordercolor=red,#1]{#2}}
+%-----------------------------------------------------------
+\usepackage[url,doi,style=numeric,backend=biber]{biblatex}
+\addbibresource{ref.bib}
+%-----------------------------------------------------------
+\newcommand{\nomer}{\bf Me. Moésio}
+\newcommand{\nome}{\bf Moésio M. de Sales\footnote{moesio@ifce.edu.br}}
+\newcommand{\nomet}{\bf Moésio M. de Sales}
+\newcommand{\titu}{Provas e Soluções}
+\newcommand{\subtitu}{Concurso}
+\newcommand{\disc}{Aulas}
+\newcommand{\curso}{Formações}
+\newcommand{\inst}{IFCE}
+%-----------------------------------------------------------
+\newcommand{\Z}{{\mathbb Z}}
+\newcommand{\N}{{\mathbb N}}
+\newcommand{\Mod}[1]{\ (\mathrm{mod}\ #1)}
+%\renewcommand{\qed}{\hfill\blacksquare}
+%-----------------------------------------------------------
+\usepackage{tikz}
+\usetikzlibrary{fit, shapes.geometric, arrows}
+\newcommand{\DEF}[1]{\noindent
+\colorbox{gray!10}{\begin{minipage}[t]{.99\textwidth}\centering
+\begin{Def} #1 \end{Def} \end{minipage}}}
+\newcommand{\PROP}[1]{\noindent
+\colorbox{blue!10}{\begin{minipage}[t]{.99\textwidth}\centering
+\begin{Prop} #1 \end{Prop} \end{minipage}}}
+\newcommand{\teo}[2]{\noindent
+\colorbox{red!10}{\begin{minipage}[t]{.99\textwidth}\centering
+\begin{Teo}[#1] #2 \end{Teo} \end{minipage} }\\ }
+\newcommand{\Obs}[1]{\noindent
+\colorbox{gray!10}{\begin{minipage}[t]{.99\textwidth}\centering
+\begin{obs} #1 \end{obs} \end{minipage}}}
+\newcommand{\EXE}[1]{\noindent
+\colorbox{gray!10}{\begin{minipage}[t]{.99\textwidth}\centering
+\begin{exe} #1 \end{exe} \end{minipage}}}
+\newcommand{\qst}[1]{\noindent
+\colorbox{blue!10}{\begin{minipage}[t]{.99\textwidth}\centering
+		 #1  \end{minipage}}}
+\newcommand{\SOL}[1]{\noindent
+\colorbox{red!10}{\begin{minipage}[t]{.99\textwidth}\centering
+\begin{sol} #1 \end{sol} \end{minipage}}}
+%
+%-----------------------------------------------------------
+%-----------------------------------------------------------
+\begin{document}
+{\Large
+\begin{center} \titu\\ \disc\\  \nome\end{center}
+}
+%-----------------------------------------------------------
+\hfill   %\today\\[2mm]
+\hrule\ 
+%-----------------------------------------------------------
+%Prova de 2016 
+%Questões 31, 32, 33, 35, 36, 37, 39  
+%42, 38, 41, 43,( tenho dúvida se fiz certo)
+
+%Prova de 2018 
+%Questões 47, 33, 34 ( tenho dúvidas se fiz certo)
+%-----------------------------------------------------------
+\input{prova}
+\todo{Fazer}
+
+
+%-----------------------------------------------------------
+\printbibliography
+%-----------------------------------------------------------
+\listoftodos[Notes]
+\end{document}

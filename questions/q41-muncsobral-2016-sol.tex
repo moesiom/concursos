@@ -1,0 +1,30 @@
+Temos que 
+
+\begin{center}
+		\begin{tikzpicture}[scale=.7]
+\tkzDefPoints{0/0/A,6/0/B}
+\tkzDrawTriangle[equilateral](A,B)\tkzGetPoint{C}
+\tkzDefSpcTriangle[medial](A,B,C){F,E,G}
+\tkzDefTriangleCenter[centroid](A,B,C)
+\tkzGetPoint{g}
+%\tkzDefTriangleCenter[spieker](A,B,C)
+%\tkzGetPoint{Sp}
+%\tkzDrawPolygon[](A,B,C)
+\tkzDrawPolygon[new](F,E,G)
+%\tkzDefCircle[in](Ma,Mb,Mc) \tkzGetPoints{I}{i}
+%\tkzDrawCircle(I,i)
+\tkzDrawPoints(B,C,A,Sp,F,E,G)
+\tkzAutoLabelPoints[center=g,dist=.3](F,E)
+%\tkzLabelPoints[right](Sp)
+\tkzLabelPoints[below](A,B,G)
+\tkzLabelPoints[above](C)
+\end{tikzpicture}
+\end{center}
+
+Os quatro triângulos da figura são congruentes e portanto a área do 
+
+\begin{eqnarray*}
+		\Delta_{ABC} &= & 4\cdot \Delta_{EFG}\\
+		\frac{\Delta_{ABC}}{\Delta_{EFG}}&= & 4\\
+		\frac{\Delta_{EFG}}{\Delta_{ABC}}&= & \frac{1}{4}\\
+\end{eqnarray*}

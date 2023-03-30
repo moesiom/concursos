@@ -1,10 +1,66 @@
-{\bf Questão 32} 
-A expressão $0,000028$ pode ser representada através da potência:
-\begin{multicols}{2}
-\begin{enumerate}
-		\item ( )$ 2,8 \times 10^{-5}$.
-\item ( )$ 2,8 \times 10^\[-4$.
-\item ( )$ 2,8 \times 10^4$.
-\item ( )$ 2,8 \times 10^5$.
-\end{enumerate}
-\end{multicols}
+\SOL{
+\begin{center}
+\begin{tikzpicture}
+		\tkzDefPoints{0/0/A, 6/0/B}
+		%\tkzDrawTriangle[pythagore](A,B)\tkzGetPoint{C}
+		\tkzDrawTriangle[two angles=36 and 72](A,B)\tkzGetPoint{C}
+		%\tkzDrawTriangle[isosceles right](C,B)\tkzGetPoint{A}
+		%\tkzDrawTriangle[euclid](A,B)\tkzGetPoint{C}
+		\tkzDrawSegment[dim={ $x$,-0.5cm,}](A,B)
+		\tkzDrawSegment[dim={ $y$,-0.5cm,}](B,C)
+		\tkzMarkAngle[size=.7, fill=gray!20, opacity=1.3](B,A,C)
+				\tkzLabelAngle[pos=-1.1](C,A,B){$36^\circ$}
+				%\tkzText(2,2){$\dfrac{AC}{AB}=\varphi$}
+		\tkzDefLine[bisector,normed](A,B,C) \tkzGetPoint{b}
+		\tkzDrawLine[dashed,color=blue, add=0 and 4](B,b)
+		\tkzInterLL(B,b)(A,C)\tkzGetPoint{D}
+		\tkzShowLine[bisector,gap=4,size=2,color=red](A,B,C)
+
+		\tkzDrawPoints(A,B,C,D)
+		\tkzLabelPoints(B)
+		\tkzLabelPoints[left](C)
+		\tkzLabelPoints[above](A,D)
+\end{tikzpicture}
+\end{center}
+
+Como o ângulo em $A$ é único então a base do triângulo é o lado $BC$ e $AC=AB$, 
+com os ângulos da base medindo $2\widehat B+36^\circ=180^\circ$, ou seja, $\widehat C=\widehat B=\frac{180-36}{2}=72^\circ$.
+
+
+\begin{center}
+\begin{tikzpicture}
+		\tkzDefPoints{0/0/A, 6/0/B}
+		\tkzDrawTriangle[two angles=36 and 72](A,B)\tkzGetPoint{C}
+		\tkzDrawSegment[dim={ $x$,-0.5cm,}](A,B)
+		\tkzDrawSegment[dim={ $x$,0.5cm,}](A,C)
+		\tkzDrawSegment[dim={ $y$,-0.5cm,}](B,C)
+		\tkzMarkAngle[size=.7, fill=gray!20, opacity=1.3](B,A,C)
+		\tkzMarkAngle[size=.5, fill=gray!20, opacity=1.3](C,B,A)
+		\tkzMarkAngle[size=.5, fill=gray!20, opacity=1.3](A,C,B)
+				\tkzLabelAngle[pos=-1.1](C,A,B){$36^\circ$}
+				\tkzLabelAngle[pos=0.9](A,C,B){$72^\circ$}
+				\tkzLabelAngle[pos=0.9](C,B,A){$72^\circ$}
+		\tkzDefLine[bisector,normed](A,B,C) \tkzGetPoint{b}
+		\tkzDrawLine[dashed,color=blue, add=0 and 3](B,b)
+		\tkzInterLL(B,b)(A,C)\tkzGetPoint{D}
+		%\tkzShowLine[bisector,gap=4,size=2,color=red](A,B,C)
+
+		\tkzDrawPoints(A,B,C,D)
+		\tkzLabelPoints(B)
+		\tkzLabelPoints[left](C)
+		\tkzLabelPoints[above](A,D)
+\end{tikzpicture}
+\end{center}
+
+
+Como $BD$ é bissetriz de $A\widehat B C$, pelo teorema da {\sc bissetriz interna}: %o ângulo $A\widehat B D=\frac{72^\circ}{2}=36^\circ$
+
+\begin{eqnarray*}
+		\frac{\overline{AB}}{\overline{AD}} &= & \frac{\overline{CB}}{\overline{CD}}\\
+		\frac{x}{\overline{AD}} &= & \frac{y}{x-\overline{AD}}\\
+		x(x-\overline{AD}) &= & y\overline{AD}\\
+		x^2 &= & x\overline{AD} + y\overline{AD}\\
+		x^2 &= & (x+y)\overline{AD} \\
+\end{eqnarray*}
+}
+\todo{Infelizmente meu notebook tá com problema e as figuras não compilaram. Vou corrigir no próximo update}

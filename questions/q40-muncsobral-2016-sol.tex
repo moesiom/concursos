@@ -1,3 +1,4 @@
+\SOL{
 Temos que $|A\cap B\cap C|=3$. Suponha , sem perda de generalidade, que $6\leq |A|\leq|B|\leq|C|$
 
 Pelo Princípio da Inclusão-Exclusão:
@@ -8,12 +9,15 @@ Pelo Princípio da Inclusão-Exclusão:
 						&&\text{Agora como o menor dos conjuntos têm no mínimo}\ 6\\
 		|A\cup B\cup C| & \geq & 6+6+6 -|A\cap B|-|A\cap C| - |B\cap C| + 3 \\
 		|A\cup B\cup C| & \geq & 21 -|A\cap B|-|A\cap C| - |B\cap C|  \\
-		\text{As intersecções}\ &  & |A\cap B|,\ |A\cap C|,\ |B\cap C|\ \text{Têm no mínimo 3 elementos em comum}  \\
-								&& \text{Como existe um conjunto com 6 elementos,temos que no máximo}\\
-								&& \text{ duas das intersecções tem no máximo 6 elementos, digamos}\\
+\text{As intersecções}\ &  & |A\cap B|,\ |A\cap C|,\ |B\cap C|\ \text{Têm no mínimo 3 elementos em}\\
+								&& \text{comum. Como existe um conjunto com 6 elementos,temos que }\\
+								&& \text{ no máximo duas das intersecções tem no máximo }\\
+								&& \text{ 6 elementos, digamos}\\
 		|A\cup B\cup C| & \geq & 21 -6-6 - |B\cap C|  \\
 						&& \text{Essa última intersecção terá 3 elementos em comum}\\
 		|A\cup B\cup C| & \geq & 21 -6-6 - 3  \\
 		|A\cup B\cup C| & \geq & 6
 \end{eqnarray*}
+}
+
 \todo{Vamos discutir essa solução.}

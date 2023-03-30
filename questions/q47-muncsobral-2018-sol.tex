@@ -1,0 +1,40 @@
+\SOL{
+Temos que 
+\begin{eqnarray*}
+		\begin{cases}
+		p(x)=(x-1)q_1(x)+5\\
+		p(x)=(x+1)q_2(x)+5
+		\end{cases}
+\end{eqnarray*}
+Usando o Teorema do Resto:
+\begin{eqnarray*}
+		p(1)=5\\
+		p(-1)=5\\
+\end{eqnarray*}
+
+Queremos determinar $R(x)$ na equação:
+\begin{eqnarray*}
+		p(x)=(x-1)(x+1)q(x)+R(x)
+\end{eqnarray*}
+Como $(x-1)(x+1)$ tem grau $2$, logo o resto $R(x)$ tem no máximo grau $1$ ,ou sejam $R(x)=ax+b$, reescrevendo:
+\begin{eqnarray*}
+		p(x)=(x-1)(x+1)q(x)+ax+b
+\end{eqnarray*}
+Aplicando os valores $p(1)$ e $p(-1)$:
+\begin{eqnarray*}
+		\begin{cases}
+		p(1)=(1-1)(1+1)q(1)+a\cdot 1+b=a+b=5\\
+		p(-1)=(-1-1)(-1+1)q(-1)+a\cdot (-1)+b=-a+b=5
+		\end{cases}
+\end{eqnarray*}
+\begin{eqnarray*}
+		\begin{cases}
+		a+b=5\\
+		-a+b=5
+		\end{cases}
+\end{eqnarray*}
+
+Resolvendo o sistema, encontramos: $a=0$ e $b=5$. Portando, $R(x)=5$.
+
+}
+\todo{O teorema do Resto de Polinômios {\sc Afirma} que divisão de um polinômio $p(x)$ pelo binômio $ax+b$ tem como resto $p(\frac{-b}{a}$)}

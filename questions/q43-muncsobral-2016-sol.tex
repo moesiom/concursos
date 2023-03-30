@@ -1,0 +1,23 @@
+%Solução quest 42
+.
+
+\begin{center}
+		\begin{tikzpicture}[scale=1]
+		\tkzInit[xmin=-1,xmax=4,ymin=-3.3,ymax=3]
+		%\tkzAxeXY
+		\tkzDrawX[noticks]
+		\tkzDrawY[noticks]
+		%\tkzAxeY
+		\tkzFct[domain=-1:5,samples=200,line width=0.8pt,color=red]{(x-1)**2+1}
+	\tkzFct[domain=-1:3,samples=200,line width=0.8pt,color=blue]{(x-1)**2-3}
+	%------------------------------(0,0)-------------------
+	\tkzDefPointByFct[ref=A0,with=a,draw](0)
+	\tkzPointShowCoord[xlabel={},xstyle={below=9pt}, ylabel={$c$}](A0)
+	%------------------------------(0,0)-------------------
+\tkzDefPointByFct[ref=A0,with=b,draw](0)
+	\tkzPointShowCoord[xlabel={},xstyle={below=9pt}, ylabel={$-c$}](A0)
+
+\end{tikzpicture}
+\end{center}
+
+A distância será $|c-(-c)|=|2c|$

@@ -1,13 +1,21 @@
-\documentclass[13pt,a4paper]{article}
+\documentclass[11pt,a4paper]{article}
 \usepackage{moesiom} %estilo Moésio
 %-----------------------------------------------------------
 \usepackage{mathtools}
-\usepackage{polynom}
-%\usepackage{graphicx}
 \usepackage{bookmark}
 \usepackage{xargs} % Use more than one optional parameter in a new commands
 %\usepackage[pdftex,dvipsnames]{xcolor}  % Coloured text etc.
-\usepackage{xcolor}  % Coloured text etc.
+%\usepackage{xcolor}  % Coloured text etc.
+\usepackage{polynom}
+%-----------------------------------------------------------
+\usepackage{pgfmath}
+%\usepackage{tkz-euclide}
+%\usepackage{tikz}
+%\usetikzlibrary{fit,arrows.meta,shadows,decorations.pathreplacing,calc}
+%\tikzset{>=latex} % for LaTeX arrow head
+\pgfplotsset{compat=1.13}
+%\usepackage{pgfplots}
+%-----------------------------------------------------------
 %
 %
 \usepackage[colorinlistoftodos,prependcaption,linecolor=red,backgroundcolor=blue!25,bordercolor=blue,textsize=tiny]{todonotes}
@@ -16,8 +24,8 @@
 \usepackage[url,doi,style=numeric,backend=biber]{biblatex}
 \addbibresource{ref.bib}
 %-----------------------------------------------------------
-\newcommand{\nomer}{\bf Me. Moésio}
-\newcommand{\nome}{\bf Moésio M. de Sales\footnote{moesio@ifce.edu.br}}
+\newcommand{\nomer}{\bf Moésio M. de Sales\footnote{moesio@ifce.edu.br}}
+\newcommand{\nome}{\bf Moésio M. de Sales}
 \newcommand{\nomet}{\bf Moésio M. de Sales}
 \newcommand{\titu}{Provas e Soluções}
 \newcommand{\subtitu}{Concurso}
@@ -49,13 +57,15 @@
 \colorbox{gray!10}{\begin{minipage}[t]{.99\textwidth}\centering
 \begin{exe} #1 \end{exe} \end{minipage}}}
 \newcommand{\qst}[1]{\noindent
-\colorbox{blue!10}{\begin{minipage}[t]{.99\textwidth}\centering
+\colorbox{blue!10}{\begin{minipage}[t]{.99\textwidth}
 		 #1  \end{minipage}}}
 \newcommand{\SOL}[1]{\noindent
-\colorbox{red!10}{\begin{minipage}[t]{.99\textwidth}\centering
+\colorbox{red!10}{\begin{minipage}[t]{.99\textwidth}
 \begin{sol} #1 \end{sol} \end{minipage}}}
 %
 %-----------------------------------------------------------
+%comando para compilar 
+%pdflatex --enable-write18 -interaction=nonstopmode %.tex
 %-----------------------------------------------------------
 \begin{document}
 {\Large
@@ -66,16 +76,21 @@
 \hrule\ 
 %-----------------------------------------------------------
 %Prova de 2016 
-%Questões 31, 32, 33, 35, 36, 37, 39  
-%42, 38, 41, 43,( tenho dúvida se fiz certo)
+%Questões 31, 32, 33, 35, 36, 37, 38, 39 ,40 
+%42, 41, 43,( tenho dúvida se fiz certo)
 
 %Prova de 2018 
 %Questões 47, 33, 34 ( tenho dúvidas se fiz certo)
 %-----------------------------------------------------------
 \input{prova}
 
-%-----------------------------------------------------------
-\printbibliography
+\input{prova-2018}
+
+
 %-----------------------------------------------------------
 \listoftodos[Notes]
+%-----------------------------------------------------------
+
+\printbibliography
+%-----------------------------------------------------------
 \end{document}

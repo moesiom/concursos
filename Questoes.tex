@@ -4,17 +4,18 @@
 \usepackage{mathtools}
 \usepackage{bookmark}
 \usepackage{xargs} % Use more than one optional parameter in a new commands
-%\usepackage[pdftex,dvipsnames]{xcolor}  % Coloured text etc.
+\usepackage[pdftex,dvipsnames]{xcolor}  % Coloured text etc.
 %\usepackage{xcolor}  % Coloured text etc.
 \usepackage{polynom}
 %-----------------------------------------------------------
 \usepackage{pgfmath}
-%\usepackage{tkz-euclide}
-%\usepackage{tikz}
+\usepackage{tkz-euclide}
+\usepackage{tikz}
+\usepackage{calculator}
 %\usetikzlibrary{fit,arrows.meta,shadows,decorations.pathreplacing,calc}
 %\tikzset{>=latex} % for LaTeX arrow head
 \pgfplotsset{compat=1.13}
-%\usepackage{pgfplots}
+\usepackage{pgfplots}
 %-----------------------------------------------------------
 %
 %
@@ -42,25 +43,25 @@
 \usepackage{tikz}
 \usetikzlibrary{fit, shapes.geometric, arrows}
 \newcommand{\DEF}[1]{\noindent
-\colorbox{gray!10}{\begin{minipage}[t]{.99\textwidth}\centering
+\colorbox{gray!10}{\begin{minipage}[t]{.89\textwidth}\centering
 \begin{Def} #1 \end{Def} \end{minipage}}}
 \newcommand{\PROP}[1]{\noindent
-\colorbox{blue!10}{\begin{minipage}[t]{.99\textwidth}\centering
+\colorbox{blue!10}{\begin{minipage}[t]{.89\textwidth}\centering
 \begin{Prop} #1 \end{Prop} \end{minipage}}}
 \newcommand{\teo}[2]{\noindent
-\colorbox{red!10}{\begin{minipage}[t]{.99\textwidth}\centering
+\colorbox{red!10}{\begin{minipage}[t]{.89\textwidth}\centering
 \begin{Teo}[#1] #2 \end{Teo} \end{minipage} }\\ }
 \newcommand{\Obs}[1]{\noindent
-\colorbox{gray!10}{\begin{minipage}[t]{.99\textwidth}\centering
+\colorbox{gray!10}{\begin{minipage}[t]{.89\textwidth}\centering
 \begin{obs} #1 \end{obs} \end{minipage}}}
 \newcommand{\EXE}[1]{\noindent
-\colorbox{gray!10}{\begin{minipage}[t]{.99\textwidth}\centering
+\colorbox{gray!10}{\begin{minipage}[t]{.89\textwidth}\centering
 \begin{exe} #1 \end{exe} \end{minipage}}}
 \newcommand{\qst}[1]{\noindent
-\colorbox{blue!10}{\begin{minipage}[t]{.99\textwidth}
+\colorbox{blue!10}{\begin{minipage}[t]{.89\textwidth}
 		 #1  \end{minipage}}}
 \newcommand{\SOL}[1]{\noindent
-\colorbox{red!10}{\begin{minipage}[t]{.99\textwidth}
+\colorbox{red!10}{\begin{minipage}[t]{.89\textwidth}
 \begin{sol} #1 \end{sol} \end{minipage}}}
 %
 %-----------------------------------------------------------
@@ -84,6 +85,7 @@
 %-----------------------------------------------------------
 \input{prova}
 
+%-----------------------------------------------------------
 \input{prova-2018}
 
 
